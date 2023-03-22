@@ -1,30 +1,16 @@
-#include <stdlib.h>
-#include <time.h>
 #include "main.h"
 
-
 /**
- * main - Entry point
- *
- * Description: print value of n satus; zero, positive or negative
- *
- * Return: Always 0 (Success)
+* main - tests function that prints if integer is positive or negative
+* Return: 0
 */
 
 int main(void)
 {
-	int n;
+        int i;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+        i = 98 % 2 ;
+        positive_or_negative(i);
 
-	/*my code*/
-	if (n > 0)
-		printf("%i is positive\n", n);
-	else if (n == 0)
-		printf("%i is zero\n", n);
-	else
-		printf("%i is negative\n", n);
-
-	return (0);
+        return (0);
 }
