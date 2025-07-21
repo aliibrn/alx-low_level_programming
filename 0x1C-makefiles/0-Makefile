@@ -1,0 +1,20 @@
+# This is a simple Makefile for compiling a C program
+
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: main
+
+main: main.o school.o
+	$(CC) $(CFLAGS) -o main main.o school.o
+
+main.o: main.c m.h
+	$(CC) $(CFLAGS) -c main.c
+
+school.o: school.c m.h
+	$(CC) $(CFLAGS) -c school.c
+
+clean:
+	rm -f *.o main
+
+.PHONY: all clean
